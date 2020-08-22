@@ -5,8 +5,7 @@ class PageHeader {
 
   updateAverage(newAverage) {
     var head = this.headerElement;
-    var badge = head.querySelector("h5 span")
-    console.log(newAverage);
+    var badge = head.querySelector("h5 span");
     badge.textContent = newAverage;
   }
 }

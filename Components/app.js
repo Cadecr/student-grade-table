@@ -17,7 +17,6 @@ class App {
       total += grades[i].grade;
     }
     var average = total / grades.length;
-    console.log(average);
     this.pageHeader.updateAverage(average);
   }
 
