@@ -33,9 +33,28 @@
       <div id="form" class="col col-lg-3">
         <form>
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div class="input-group">
+              <div class="col-sm-2 input-group-prepend">
+                <span><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" name="Name" class="form-control" placeholder="Name" aria-label="Name" id="formName">
+            </div>
+            <div class="input-group">
+              <div class="col-sm-2 input-group-prepend">
+                <span><i class="far fa-list-alt"></i></span>
+              </div>
+              <input type="text" name="Course" class="form-control" placeholder="Course" aria-label="Course" id="formCourse">
+            </div>
+            <div class="input-group">
+              <div class="col-sm-2 input-group-prepend">
+                <span><i class="fas fa-graduation-cap"></i></span>
+              </div>
+              <input type="text" name="Grade" class="form-control" placeholder="Grade" aria-label="Grade" id="formGrade">
+            </div>
+          </div>
+          <div id="button">
+            <button type="submit" class="btn btn-outline-primary">Add</button>
+            <button type="reset" class="btn btn-outline-primary">Cancel</button>
           </div>
         </form>
       </div>
