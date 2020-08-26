@@ -5,9 +5,9 @@ class GradeTable {
 
   updateGrades(grades) {
     console.log(grades);
-    this.tableElement.empty();
+    var tBody = $("#table");
+    tBody.empty();
     for (var i = 0; i < grades.length; i++) {
-      var tBody = $("#table");
       var row = document.createElement("tr");
       var studentName = document.createElement("td");
       var course = document.createElement("td");
