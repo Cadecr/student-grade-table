@@ -4,29 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
   <title>Student Grade Table</title>
 </head>
 <body>
   <div class="container">
     <div id="header" class="row">
-      <h1 class="col-sm-9">Student Grade Table</h1>
-      <h5 id="averageGrade" class="col-sm-3">Average Grade <span class="badge badge-secondary"></span></h5>
+      <h1 class="col">Student Grade Table</h1>
+      <h5 id="averageGrade" class="col-lg-3">Average Grade <span class="badge badge-secondary"></span></h5>
     </div>
-    <table class="table container table-striped table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">Student Name</th>
-          <th scope="col">Courses</th>
-          <th scope="col">Grade</th>
-        </tr>
-      </thead>
-      <tbody id="table">
-      </tbody>
-    </table>
+    <div class="row">
+      <div id="leftTable" class="col">
+        <table class="table container table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Student Name</th>
+              <th scope="col">Courses</th>
+              <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody id="table">
+          </tbody>
+        </table>
+      </div>
+      <div id="form" class="col col-lg-3">
+        <form id="gradeForm">
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" name="Name" class="form-control" placeholder="Name" aria-label="Name" id="formName">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="far fa-list-alt"></i></span>
+              </div>
+              <input type="text" name="Course" class="form-control" placeholder="Course" aria-label="Course" id="formCourse">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-graduation-cap"></i></span>
+              </div>
+              <input type="text" name="Grade" class="form-control" placeholder="Grade" aria-label="Grade" id="formGrade">
+            </div>
+          </div>
+          <div id="button">
+            <button type="submit" class="btn btn-outline-primary">Add</button>
+            <button type="reset" class="btn btn-outline-primary">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
   <script src="Components/grade-table.js"></script>
+  <script src="Components/grade-form.js"></script>
   <script src="Components/page-header.js"></script>
   <script src="Components/app.js"></script>
   <script src="main.js"></script>
