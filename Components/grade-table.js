@@ -21,4 +21,19 @@ class GradeTable {
       grade.textContent = grades[i].grade;
     }
   }
+
+  onDeleteClick(deleteGrade) {
+    this.deleteGrade = deleteGrade;
+  }
+
+  renderGradeRow(data, deleteGrade) {
+    var table = $("#table");
+    var row = document.createElement("<tr>");
+    var name = document.createElement("<td>");
+    var course = document.createElement("<td>");
+    var grade = document.createElement("<td>");
+    var delete = document.createElement("<td>")
+    var button = document.createElement("<button>");
+
+  }
 }
