@@ -10,7 +10,7 @@ class App {
     this.handleCreateGradeSuccess = this.handleCreateGradeSuccess.bind(this);
     this.deleteGrade = this.deleteGrade.bind(this);
     this.handleDeleteGradeError = this.handleDeleteGradeError.bind(this);
-    tehis.handleDeleteGradeSuccess = this.handleDeleteGradeSuccess.bind(this);
+    this.handleDeleteGradeSuccess = this.handleDeleteGradeSuccess.bind(this);
 
   }
 
@@ -80,5 +80,6 @@ class App {
   start() {
     this.getGrades();
     this.gradeForm.onSubmit(this.createGrade);
+    this.gradeTable.onDeleteClick(this.deleteGrade);
   }
 }
