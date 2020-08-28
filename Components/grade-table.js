@@ -32,8 +32,18 @@ class GradeTable {
     var name = document.createElement("<td>");
     var course = document.createElement("<td>");
     var grade = document.createElement("<td>");
-    var delete = document.createElement("<td>")
+    var deleteData = document.createElement("<td>")
     var button = document.createElement("<button>");
+    //table.append(row);
+    row.appendChild(name);
+    name.textContent = data.name;
+    row.appendChild(course);
+    course.textContent = data.course;
+    row.appendChild(grade);
+    grade.textContent = data.grade;
+    row.appendChild(deleteData);
+    deleteData.appendChild(button);
+    button.textContent = "DELETE";
 
   }
 }
