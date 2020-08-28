@@ -11,7 +11,7 @@ class GradeTable {
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade);
     };
-    if(grades = null) {
+    if(grades === null) {
       var noGrades = document.getElementById("noGrade");
       noGrades.classList.remove(".d-none");
     };
@@ -19,6 +19,7 @@ class GradeTable {
 
   onDeleteClick(deleteGrade) {
     this.deleteGrade = deleteGrade;
+    //console.log("delete")
   }
 
   renderGradeRow(data, deleteGrade) {
@@ -39,6 +40,7 @@ class GradeTable {
     row.appendChild(deleteData);
     deleteData.appendChild(button);
     button.textContent = "DELETE";
+    button.addEventListener("click", deleteGrade, data.id)
     //button.classList.add("btn btn-danger")
     return row;
   }
