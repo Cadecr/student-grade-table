@@ -21,7 +21,11 @@ class GradeTable {
       // row.appendChild(grade);
       // grade.textContent = grades[i].grade;
       this.renderGradeRow(grades[i], this.deleteGrade);
-    }
+    };
+    if(grades = null) {
+      var noGrades = document.getElementById("noGrade");
+      noGrades.classList.remove(".d-none");
+    };
   }
 
   onDeleteClick(deleteGrade) {
