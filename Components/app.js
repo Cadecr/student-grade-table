@@ -66,7 +66,6 @@ class App {
   }
 
   deleteGrade(id) {
-    console.log(id);
     $.ajax({
       type: "DELETE",
       url: "https://sgt.lfzprototypes.com/api/grades/" + id,

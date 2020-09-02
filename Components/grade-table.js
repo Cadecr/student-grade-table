@@ -39,11 +39,11 @@ class GradeTable {
     row.appendChild(deleteData);
     deleteData.appendChild(button);
     button.textContent = "DELETE";
-    var dataId = data.id
-    //this.deleteGrade = deleteGrade;
-    button.addEventListener("click", this.deleteGrade.dataId)
+    button.onclick = function deletes() {
+      deleteGrade(data.id);
+    }
+    //button.addEventListener("click", deleteGrade(data.id));
     //button.classList.add("btn btn-danger")
-    return dataId;
     return row;
   }
 }
