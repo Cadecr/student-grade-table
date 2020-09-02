@@ -11,9 +11,9 @@ class GradeTable {
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade);
     };
-    if(grades === null) {
-      var noGrades = document.getElementById("noGrade");
-      noGrades.classList.remove(".d-none");
+    if(grades.length === 0) {
+      var noGrades =this.noGradesElement
+      noGrade.classList.remove("d-none");
     };
   }
 
