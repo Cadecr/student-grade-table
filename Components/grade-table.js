@@ -19,7 +19,6 @@ class GradeTable {
 
   onDeleteClick(deleteGrade) {
     this.deleteGrade = deleteGrade;
-    //console.log("delete")
   }
 
   renderGradeRow(data, deleteGrade) {
@@ -40,8 +39,11 @@ class GradeTable {
     row.appendChild(deleteData);
     deleteData.appendChild(button);
     button.textContent = "DELETE";
-    button.addEventListener("click", deleteGrade, data.id)
+    var dataId = data.id
+    //this.deleteGrade = deleteGrade;
+    button.addEventListener("click", this.deleteGrade.dataId)
     //button.classList.add("btn btn-danger")
+    return dataId;
     return row;
   }
 }
