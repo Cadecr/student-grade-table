@@ -5,16 +5,16 @@ class GradeTable {
   }
 
   updateGrades(grades) {
-    console.log(grades);
-    var tBody = $("#table");
-    tBody.empty();
+    this.tableElement.empty();
     for (var i = 0; i < grades.length; i++) {
-      this.renderGradeRow(grades[i], this.deleteGrade);
+      var render = this.renderGradeRow(grades[i], this.deleteGrade);
+      this.tableElement.append(render);
     };
     if(grades.length === 0) {
       var noGrades =this.noGradesElement
       noGrade.classList.remove("d-none");
     };
+
   }
 
   onDeleteClick(deleteGrade) {
@@ -22,14 +22,12 @@ class GradeTable {
   }
 
   renderGradeRow(data, deleteGrade) {
-    var table = $("#table");
     var row = document.createElement("tr");
     var name = document.createElement("td");
     var course = document.createElement("td");
     var grade = document.createElement("td");
     var deleteData = document.createElement("td")
     var button = document.createElement("button");
-    table.append(row);
     row.appendChild(name);
     name.textContent = data.name;
     row.appendChild(course);

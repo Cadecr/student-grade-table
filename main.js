@@ -1,4 +1,4 @@
-var tableBody = $("<table>");
+var tableBody = $("#table");
 var header = document.querySelector("#header");
 var form = document.querySelector("#gradeForm")
 var noGrades = document.querySelector("#noGrade");
